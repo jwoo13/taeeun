@@ -148,3 +148,70 @@ body {
   color: #aaa;
   text-align: center;
 }
+
+.sakura-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sakura {
+  position: absolute;
+  top: -10px;
+  width: 14px;
+  height: 14px;
+  background: #ff8fb1;
+  transform: rotate(45deg);
+  opacity: 0.9;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+.sakura::before,
+.sakura::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #ff8fb1;
+  border-radius: 50%;
+}
+
+.sakura::before {
+  top: -7px;
+  left: 0;
+}
+
+.sakura::after {
+  left: -7px;
+  top: 0;
+}
+
+.white-transition{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:white;
+  z-index:999;
+  animation:whiteFade 1.2s forwards;
+}
+
+@keyframes whiteFade{
+  0%{opacity:0;}
+  40%{opacity:1;}
+  100%{opacity:0;}
+}

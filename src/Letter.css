@@ -1,0 +1,23 @@
+.letter{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    max-width:420px;
+    margin:auto;
+    text-align:center;
+
+    border:4px dashed #ffb6c1;
+
+    box-shadow:
+            0 10px 0px rgba(255,182,193,0.3);
+}
+
+.letter h2{
+    color:#ff8fb1;
+    margin-bottom:20px;
+}
+
+.letter p{
+    color:#555;
+    line-height:1.8;
+}
