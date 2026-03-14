@@ -1,23 +1,128 @@
 .letter{
-    background:white;
-    padding:40px;
-    border-radius:20px;
+    position:relative;
+
     max-width:420px;
     margin:auto;
-    text-align:center;
+    padding:30px 30px;
 
+    border-radius:20px;
     border:4px dashed #ffb6c1;
 
-    box-shadow:
-            0 10px 0px rgba(255,182,193,0.3);
+    font-family:"Nanum Pen Script", cursive;
+
+    box-shadow:0 10px 0px rgba(255,182,193,0.3);
+
+    background:
+            linear-gradient(0deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+            #ffffff;
+
+    background-size:4px 4px;
 }
 
 .letter h2{
+    margin-top:0;
     color:#ff8fb1;
     margin-bottom:20px;
+    font-size:28px;
 }
 
 .letter p{
-    color:#555;
-    line-height:1.8;
+    color:#444;
+    font-size:22px;
+    line-height:34px;
+}
+
+.nextBtn{
+    position:absolute;
+
+    right:15px;
+    bottom:15px;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+    border:none;
+
+    background:#ff8fb1;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+.nextBtn:hover{
+    transform:scale(1.1);
+    background:#ff6fa0;
+}
+
+/* 페이지 들어올 때 */
+.pageIn{
+    animation:pageIn 0.35s ease;
+}
+
+/* 페이지 나갈 때 */
+.pageOut{
+    animation:pageOut 0.2s ease;
+}
+
+@keyframes pageOut{
+
+    from{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+    to{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+
+}
+
+@keyframes pageIn{
+
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+.prevBtn{
+    position:absolute;
+
+    left:15px;
+    bottom:15px;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+    border:none;
+
+    background:#ff8fb1;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+.prevBtn:hover{
+    transform:scale(1.1);
+    background:#ff6fa0;
 }
